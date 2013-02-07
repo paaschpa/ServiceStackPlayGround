@@ -4,3 +4,10 @@ MVC4 Internet Application
 Ext JS 4.1.1a - http://www.sencha.com/products/extjs/download/
 - http://docs.sencha.com/ext-js/4-1/#/guide/getting_started 
 - Application Structure
+
+Install ServiceStack.Host.Mvc
+http://www.servicestack.net/mvc-powerpack/
+Redis - Don't Need
+OrmLite & OrmLite.SqlServer - Don't Need
+
+api/MetaData

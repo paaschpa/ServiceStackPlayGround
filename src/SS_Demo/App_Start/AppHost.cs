@@ -12,6 +12,7 @@ using ServiceStack.ServiceInterface;
 using ServiceStack.ServiceInterface.Auth;
 using ServiceStack.ServiceInterface.ServiceModel;
 using ServiceStack.WebHost.Endpoints;
+using SS_Demo.SimpleExamples;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(SS_Demo.App_Start.AppHost), "Start")]
 
