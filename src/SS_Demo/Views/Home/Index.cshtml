@@ -15,23 +15,48 @@
         </div>
     </section>
 }
-<h3>We suggest the following:</h3>
+
+<h3>What Can We Do?</h3>
 <ol class="round">
     <li class="one">
-        <h5>Simple Demo of Api Reques</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards. <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn
-            more</a></li>
+        <h5>Standard Hello World</h5>
+        <a href="api/Hello/World">Hello World Demo</a>
+    </li>
     <li class="two">
-        <h5>Add NuGet packages and jump start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools. <a href="http://go.microsoft.com/fwlink/?LinkId=245153">
-            Learn more</a></li>
+        <h5>MetaData</h5>
+        <a href="api/metadata">Take a look at the MetaData</a>
+    </li>
     <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications. <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn
-            more</a></li>
+        <h5>Call it from JavaScript (using ExtJs framework sencha.com/products/extjs)</h5>
+        <div id="helloJsCall"></div>
+    </li>
 </ol>
+
+@section scripts {
+<script>
+    Ext.onReady(function () {
+        var requestText = Ext.create('Ext.form.field.Text', { fieldLabel: 'Request' })
+        var responseText = Ext.create('Ext.form.field.Text', { fieldLabel: 'Response', readOnly: true });
+        var sendButton = {
+            xtype: 'button',
+            text: 'Send',
+            handler: function () {
+                Ext.Ajax.request({
+                    method: 'GET',
+                    url: '/api/Hello?format=json',
+                    params: { Name: requestText.getValue() },
+                    success: function (response, opts) {
+                        var result = Ext.JSON.decode(response.responseText).result;
+                        responseText.setValue(result);
+                    }
+                });
+            }
+        };
+
+        var helloPanel = Ext.create('Ext.panel.Panel', {
+            renderTo: 'helloJsCall',
+            items: [requestText, responseText, sendButton]
+        });
+    })
+</script>
+}

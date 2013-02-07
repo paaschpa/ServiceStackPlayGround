@@ -3,11 +3,13 @@ using System.Linq;
 using System.Configuration;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using ServiceStack.Common;
 using ServiceStack.Configuration;
 using ServiceStack.CacheAccess;
 using ServiceStack.CacheAccess.Providers;
 using ServiceStack.Mvc;
 using ServiceStack.OrmLite;
+using ServiceStack.ServiceHost;
 using ServiceStack.ServiceInterface;
 using ServiceStack.ServiceInterface.Auth;
 using ServiceStack.ServiceInterface.ServiceModel;
@@ -52,8 +54,9 @@ namespace SS_Demo.App_Start
 			  .Add<Hello>("/hello/{Name*}");
 
 			//Uncomment to change the default ServiceStack configuration
-			//SetConfig(new EndpointHostConfig {
-			//});
+            //SetConfig(new EndpointHostConfig {
+            //    EnableFeatures = Feature.All.Remove(Feature.Metadata)
+            //});
 
 			//Enable Authentication
 			//ConfigureAuth(container);
