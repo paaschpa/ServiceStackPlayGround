@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -46,6 +49,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -90,9 +96,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20505.0\lib\net40\System.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Optimization">
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0-beta2\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Providers">
       <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.0\lib\net40\System.Web.Providers.dll</HintPath>
     </Reference>
@@ -113,12 +116,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.0.0\lib\WebGrease.dll</HintPath>
-    </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.0.0\lib\Antlr3.Runtime.dll</HintPath>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -134,50 +132,45 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Content\themes\base\jquery.ui.all.css" />
-    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Content\themes\base\jquery.ui.base.css" />
-    <Content Include="Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Content\themes\base\jquery.ui.core.css" />
-    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Content\themes\base\jquery.ui.slider.css" />
-    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.6.2.js" />
-    <Content Include="Scripts\jquery-1.6.2.min.js" />
-    <Content Include="Scripts\jquery-ui-1.8.11.js" />
-    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.0.0.debug.js" />
-    <Content Include="Scripts\knockout-2.0.0.js" />
-    <Content Include="Scripts\modernizr-2.0.6-development-only.js" />
+    <Content Include="Scripts\extjs\ext-all-debug.js" />
+    <Content Include="Scripts\extjs\ext-neptune-debug.js" />
+    <Content Include="Scripts\extjs\Notes.txt" />
+    <Content Include="Scripts\resources\css\ext-neptune-debug.css" />
+    <Content Include="Scripts\resources\css\ext-neptune.css" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\arrow.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\arrow.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\btn.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\group-cs.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\group-lr.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\group-tb.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\s-arrow-b-noline.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\s-arrow-b.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\s-arrow-bo.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\s-arrow-light.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\s-arrow-noline.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\s-arrow-o.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\s-arrow-p.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\button\s-arrow.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\checkbox.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\grid\header-border.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\grid\sort.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\icons.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\invalid.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\radio.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\tools-small.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\tools.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\tree\elbows.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\tree\icons-blue.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\tree\icons-gray.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\tree\icons-navy.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\tree\icons-orange.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\tree\icons-white.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\tree\icons.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\triggerfield.png" />
+    <Content Include="Scripts\resources\themes\images\neptune\valid.gif" />
+    <Content Include="Scripts\resources\themes\images\neptune\WYSIWYG.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -186,7 +179,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />
     <Content Include="Images\bullet.png" />
@@ -221,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\app\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
