@@ -12,4 +12,8 @@ OrmLite & OrmLite.SqlServer - Don't Need
 
 api/MetaData
 
-- Register IsisOrdering.ServiceInterface
+- Register IsisOrdering.ServiceInterface in AppHost
+
+- Remove OrmLite.SqlServer / Use Sqlite
+
+

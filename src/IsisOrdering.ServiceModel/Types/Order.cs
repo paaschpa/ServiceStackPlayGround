@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ServiceStack.DataAnnotations;
 
 namespace IsisOrdering.ServiceModel.Types
 {
     public class Order
     {
-        public int Id { get; set; }
+        [AutoIncrement]
+        public int Id { get; set; } //OrmLite expects Id to primary key...can use [PrimaryKey] attribute or [Alias("DbFieldName"] 
         public string CustomerName { get; set; }
         public string ShipName { get; set; }
         public string ShipAddress { get; set; }
@@ -20,6 +22,7 @@ namespace IsisOrdering.ServiceModel.Types
 
     public class OrderDetail
     {
+        [AutoIncrement]
         public int Id { get; set; }
         public int OrderId { get; set; }
         public int ItemId { get; set; }

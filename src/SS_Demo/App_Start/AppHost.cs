@@ -10,6 +10,7 @@ using ServiceStack.CacheAccess;
 using ServiceStack.CacheAccess.Providers;
 using ServiceStack.Mvc;
 using ServiceStack.OrmLite;
+using ServiceStack.OrmLite.Sqlite;
 using ServiceStack.ServiceHost;
 using ServiceStack.ServiceInterface;
 using ServiceStack.ServiceInterface.Auth;
@@ -42,12 +43,15 @@ namespace SS_Demo.App_Start
 		: AppHostBase
 	{		
 		public AppHost() //Tell ServiceStack the name and where to find your web services
-			: base("StarterTemplate ASP.NET Host", typeof(HelloService).Assembly, typeof(OrdersService).Assembly) { }
+			: base("ServiceStackPlayGround", typeof(HelloService).Assembly, typeof(OrdersService).Assembly) { }
 
 		public override void Configure(Funq.Container container)
 		{
 			//Set JSON web services to return idiomatic JSON camelCase properties
 			ServiceStack.Text.JsConfig.EmitCamelCaseNames = true;
+		    var dataFilePath = AppDomain.CurrentDomain.GetData("DataDirectory").ToString() + "\\data.db";
+		    container.Register<IDbConnectionFactory>(new OrmLiteConnectionFactory(dataFilePath, SqliteOrmLiteDialectProvider.Instance));
+		    new DataSeeder().Seed(); //Comment out to stop resetting the data
 		
 			//Configure User Defined REST Paths
 			Routes
