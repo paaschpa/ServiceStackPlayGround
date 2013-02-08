@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div id="ordersGrid"></div>
+
+@section scripts{
+    <script>
+        Ext.onReady(function() {
+            var ordersStore = Ext.create('Ext.data.Store', {
+                fields: ['id', 'customerName', 'countItems', 'totalCost'],
+                proxy: {
+                    type: 'ajax',
+                    url: '/api/Orders/Page/1?format=json',
+                    reader: { type: 'json', root: 'orders' }
+                } 
+            });
+
+            ordersStore.load();
+            var ordersGrid = Ext.create('Ext.grid.Panel', {
+                renderTo: 'ordersGrid',
+                store: ordersStore,
+                columns: [
+                    { header: 'Customer Name', dataIndex: 'customerName' },
+                    { header: '# of Items', dataIndex: 'countItems' },
+                    { header: 'Total Cost' }
+                ]
+            });
+        })
+    </script>
+}
+

@@ -155,6 +155,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\IsisPrinting\Controllers\HomeController.cs" />
+    <Compile Include="Areas\IsisPrinting\Controllers\OrderingController.cs" />
     <Compile Include="Areas\IsisPrinting\IsisPrintingAreaRegistration.cs" />
     <Compile Include="SimpleExamples\Hello.cs" />
     <Compile Include="SimpleExamples\ToDos.cs" />
@@ -168,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\js\ss-validation.js" />
+    <Content Include="Scripts\resources\themes\images\neptune\grid\loading.gif" />
     <Content Include="ToDoExample.htm" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -265,6 +267,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\IsisPrinting\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\IsisPrinting\Views\Ordering\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IsisOrdering.ServiceInterface\IsisOrdering.ServiceInterface.csproj">
+      <Project>{08DC54F0-B31F-4E9E-AF59-2D493DFCDDDE}</Project>
+      <Name>IsisOrdering.ServiceInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,3 +11,5 @@ Redis - Don't Need
 OrmLite & OrmLite.SqlServer - Don't Need
 
 api/MetaData
+
+- Register IsisOrdering.ServiceInterface
