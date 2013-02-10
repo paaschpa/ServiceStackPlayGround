@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{08DC54F0-B31F-4E9E-AF59-2D493DFCDDDE}</ProjectGuid>
+    <ProjectGuid>{B747B85F-A34A-4987-9262-70FF0D463FCB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IsisOrdering.ServiceInterface</RootNamespace>
-    <AssemblyName>IsisOrdering.ServiceInterface</AssemblyName>
+    <RootNamespace>Counter.ServiceModel</RootNamespace>
+    <AssemblyName>Counter.ServiceModel</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,10 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\packages\ServiceStack.Common.3.9.35\lib\net35\ServiceStack.Interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceStack.ServiceInterface">
-      <HintPath>..\packages\ServiceStack.3.9.35\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
+      <HintPath>..\SS_Demo\bin\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,14 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OrdersService.cs" />
+    <Compile Include="Operations\CreateRepairOrder.cs" />
+    <Compile Include="Operations\RepairOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IsisOrdering.ServiceModel\IsisOrdering.ServiceModel.csproj">
-      <Project>{C3C0CAB5-C95E-4D3A-822F-83585B661378}</Project>
-      <Name>IsisOrdering.ServiceModel</Name>
-    </ProjectReference>
+    <Compile Include="Types\RepairOrder.cs" />
+    <Compile Include="Types\ServiceAdvisor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

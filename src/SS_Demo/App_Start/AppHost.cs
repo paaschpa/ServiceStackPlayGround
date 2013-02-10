@@ -3,7 +3,7 @@ using System.Linq;
 using System.Configuration;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using IsisOrdering.ServiceInterface;
+using Counter.ServiceInterface;
 using ServiceStack.Common;
 using ServiceStack.Configuration;
 using ServiceStack.CacheAccess;
@@ -43,7 +43,7 @@ namespace SS_Demo.App_Start
 		: AppHostBase
 	{		
 		public AppHost() //Tell ServiceStack the name and where to find your web services
-			: base("ServiceStackPlayGround", typeof(HelloService).Assembly, typeof(OrdersService).Assembly) { }
+			: base("ServiceStackPlayGround", typeof(HelloService).Assembly, typeof(RepairOrdersService).Assembly) { }
 
 		public override void Configure(Funq.Container container)
 		{

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div id="ordersGrid"></div>
+
+@section scripts{
+    <script>
+        Ext.onReady(function () {
+            var ordersStore = Ext.create('Ext.data.Store', {
+                fields: ['code', 'advisor', 'customerName', 'year', 'make', 'model', 'vin', 'promiseDate', 'status'],
+                proxy: {
+                    type: 'ajax',
+                    url: '/api/RepairOrders/Page/1?format=json',
+                    reader: { type: 'json', root: 'repairOrders' }
+                }
+            });
+
+            ordersStore.load();
+            var ordersGrid = Ext.create('Ext.grid.Panel', {
+                renderTo: 'ordersGrid',
+                store: ordersStore,
+                columns: [
+                    { header: 'Code', dataIndex: 'code' },
+                    { header: 'Advisor', dataIndex: 'advisor' },
+                    { header: 'Customer', dataIndex: 'customerName' },
+                    { header: 'Vehicle', renderer: function () {
+                            return '';
+                        }
+                    },
+                    { header: 'Promise Date', dataIndex: 'promiseDate'},
+                    { header: 'Status', dataIndex: 'status'}
+                ]
+            });
+        })
+    </script>
+}
+

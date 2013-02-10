@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SS_Demo.Areas.IsisPrinting.Controllers
+namespace SS_Demo.Areas.IsisAutoRepair.Controllers
 {
-    public class OrderingController : Controller
+    public class ServiceCounterController : Controller
     {
         public ActionResult Index()
         {

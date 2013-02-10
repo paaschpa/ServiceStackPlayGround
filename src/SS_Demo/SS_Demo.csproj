@@ -160,9 +160,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\IsisPrinting\Controllers\HomeController.cs" />
-    <Compile Include="Areas\IsisPrinting\Controllers\OrderingController.cs" />
-    <Compile Include="Areas\IsisPrinting\IsisPrintingAreaRegistration.cs" />
+    <Compile Include="Areas\IsisAutoRepair\Controllers\HomeController.cs" />
+    <Compile Include="Areas\IsisAutoRepair\Controllers\ServiceCounterController.cs" />
+    <Compile Include="Areas\IsisAutoRepair\IsisAutoRepairAreaRegistration.cs" />
     <Compile Include="DataSeeder.cs" />
     <Compile Include="SimpleExamples\Hello.cs" />
     <Compile Include="SimpleExamples\ToDos.cs" />
@@ -251,7 +251,7 @@
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Areas\IsisPrinting\Views\Home\Index.cshtml" />
+    <Content Include="Areas\IsisAutoRepair\Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
@@ -266,32 +266,32 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\IsisPrinting\Models\" />
+    <Folder Include="Areas\IsisAutoRepair\Models\" />
     <Folder Include="Scripts\app\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\IsisPrinting\Views\Web.config" />
+    <Content Include="Areas\IsisAutoRepair\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\IsisPrinting\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\IsisAutoRepair\Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\IsisPrinting\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\IsisAutoRepair\Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\IsisPrinting\Views\Ordering\Index.cshtml" />
+    <Content Include="Areas\IsisAutoRepair\Views\ServiceCounter\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IsisOrdering.ServiceInterface\IsisOrdering.ServiceInterface.csproj">
-      <Project>{08DC54F0-B31F-4E9E-AF59-2D493DFCDDDE}</Project>
-      <Name>IsisOrdering.ServiceInterface</Name>
+    <ProjectReference Include="..\Counter.ServiceInterface\Counter.ServiceInterface.csproj">
+      <Project>{AFA4B4DF-9F72-423E-BC89-70E4F03DB880}</Project>
+      <Name>Counter.ServiceInterface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IsisOrdering.ServiceModel\IsisOrdering.ServiceModel.csproj">
-      <Project>{C3C0CAB5-C95E-4D3A-822F-83585B661378}</Project>
-      <Name>IsisOrdering.ServiceModel</Name>
+    <ProjectReference Include="..\Counter.ServiceModel\Counter.ServiceModel.csproj">
+      <Project>{B747B85F-A34A-4987-9262-70FF0D463FCB}</Project>
+      <Name>Counter.ServiceModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

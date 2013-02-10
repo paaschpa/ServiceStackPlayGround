@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS_Demo", "SS_Demo\SS_Demo.csproj", "{E081B63D-66A7-46DE-ACC4-F4355416A9FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsisOrdering.ServiceModel", "IsisOrdering.ServiceModel\IsisOrdering.ServiceModel.csproj", "{C3C0CAB5-C95E-4D3A-822F-83585B661378}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IsisServiceCounter", "IsisServiceCounter", "{3B2E8EEE-B143-4E70-9FCE-AEBB59C033D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsisOrdering.ServiceInterface", "IsisOrdering.ServiceInterface\IsisOrdering.ServiceInterface.csproj", "{08DC54F0-B31F-4E9E-AF59-2D493DFCDDDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counter.ServiceModel", "Counter.ServiceModel\Counter.ServiceModel.csproj", "{B747B85F-A34A-4987-9262-70FF0D463FCB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IsisOrdering", "IsisOrdering", "{3B2E8EEE-B143-4E70-9FCE-AEBB59C033D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counter.ServiceInterface", "Counter.ServiceInterface\Counter.ServiceInterface.csproj", "{AFA4B4DF-9F72-423E-BC89-70E4F03DB880}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,20 +19,20 @@ Global
 		{E081B63D-66A7-46DE-ACC4-F4355416A9FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E081B63D-66A7-46DE-ACC4-F4355416A9FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E081B63D-66A7-46DE-ACC4-F4355416A9FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3C0CAB5-C95E-4D3A-822F-83585B661378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3C0CAB5-C95E-4D3A-822F-83585B661378}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3C0CAB5-C95E-4D3A-822F-83585B661378}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3C0CAB5-C95E-4D3A-822F-83585B661378}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08DC54F0-B31F-4E9E-AF59-2D493DFCDDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08DC54F0-B31F-4E9E-AF59-2D493DFCDDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08DC54F0-B31F-4E9E-AF59-2D493DFCDDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08DC54F0-B31F-4E9E-AF59-2D493DFCDDDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B747B85F-A34A-4987-9262-70FF0D463FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B747B85F-A34A-4987-9262-70FF0D463FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B747B85F-A34A-4987-9262-70FF0D463FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B747B85F-A34A-4987-9262-70FF0D463FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA4B4DF-9F72-423E-BC89-70E4F03DB880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA4B4DF-9F72-423E-BC89-70E4F03DB880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA4B4DF-9F72-423E-BC89-70E4F03DB880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA4B4DF-9F72-423E-BC89-70E4F03DB880}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{08DC54F0-B31F-4E9E-AF59-2D493DFCDDDE} = {3B2E8EEE-B143-4E70-9FCE-AEBB59C033D7}
-		{C3C0CAB5-C95E-4D3A-822F-83585B661378} = {3B2E8EEE-B143-4E70-9FCE-AEBB59C033D7}
+		{B747B85F-A34A-4987-9262-70FF0D463FCB} = {3B2E8EEE-B143-4E70-9FCE-AEBB59C033D7}
+		{AFA4B4DF-9F72-423E-BC89-70E4F03DB880} = {3B2E8EEE-B143-4E70-9FCE-AEBB59C033D7}
 	EndGlobalSection
 EndGlobal

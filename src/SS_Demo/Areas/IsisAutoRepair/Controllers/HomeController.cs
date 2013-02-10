@@ -4,13 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SS_Demo.Areas.IsisPrinting.Controllers
+namespace SS_Demo.Areas.IsisAutoRepair.Controllers
 {
     public class HomeController : Controller
     {
-        //
-        // GET: /IsisPrinting/Home/
-
         public ActionResult Index()
         {
             return View();

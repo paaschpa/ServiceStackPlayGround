@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IsisOrdering.ServiceInterface")]
+[assembly: AssemblyTitle("Counter.ServiceModel")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IsisOrdering.ServiceInterface")]
+[assembly: AssemblyProduct("Counter.ServiceModel")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8f66c8f6-8cea-433b-8ba0-b9bcda245360")]
+[assembly: Guid("d580cb67-ea46-4ed9-a14d-32dcbf9524d9")]
 
 // Version information for an assembly consists of the following four values:
 //

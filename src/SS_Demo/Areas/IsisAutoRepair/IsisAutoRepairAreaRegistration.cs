@@ -1,24 +1,24 @@
 ﻿using System.Web.Mvc;
 
-namespace SS_Demo.Areas.IsisPrinting
+namespace SS_Demo.Areas.IsisAutoRepair
 {
-    public class IsisPrintingAreaRegistration : AreaRegistration
+    public class IsisAutoRepairAreaRegistration : AreaRegistration
     {
         public override string AreaName
         {
             get
             {
-                return "IsisPrinting";
+                return "IsisAutoRepair";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
             context.MapRoute(
-                "IsisPrinting_default",
-                "IsisPrinting/{controller}/{action}/{id}",
+                "IsisAutoRepair_default",
+                "IsisAutoRepair/{controller}/{action}/{id}",
                 new { controller="Home", action = "Index", id = UrlParameter.Optional }, 
-                new[] {"SS_Demo.Areas.IsisPrinting.Controllers" }
+                new[] {"SS_Demo.Areas.IsisAutoRepair.Controllers" }
             );
         }
     }
