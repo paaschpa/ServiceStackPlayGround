@@ -51,7 +51,7 @@ namespace SS_Demo.App_Start
 			ServiceStack.Text.JsConfig.EmitCamelCaseNames = true;
 		    var dataFilePath = AppDomain.CurrentDomain.GetData("DataDirectory").ToString() + "\\data.db";
 		    container.Register<IDbConnectionFactory>(new OrmLiteConnectionFactory(dataFilePath, SqliteOrmLiteDialectProvider.Instance));
-		    new DataSeeder().Seed(); //Comment out to stop resetting the data
+		    //new DataSeeder().Seed(); //Comment out to stop resetting the data
 		
 			//Configure User Defined REST Paths
 			Routes

@@ -2,13 +2,57 @@
     ViewBag.Title = "Index";
 }
 
+<div id="newOrder"></div>
 <div id="ordersGrid"></div>
 
 @section scripts{
     <script>
-        Ext.onReady(function () {
+        Ext.onReady(function() {
+            Ext.define('PageBus', {
+                extend: 'Ext.util.Observable',
+                constructor: function(config) {
+                    this.name = config.name;
+                    this.addEvents({
+                        "refreshGrid": true,
+                    });
+                    this.listeners = config.listeners;
+                    this.callParent(arguments);
+                }
+            });
+            var pageBus = Ext.create('PageBus', {
+                listeners: {
+                    refreshGrid: function() {
+                        ordersStore.load();
+                    }
+                }
+            });
+
+            var makeModels = Ext.create('Ext.data.Store', {
+                model: 'MakeModel',
+                proxy: {
+                    type: 'ajax',
+                    url: '/api/MakeModels?format=json',
+                    reader: { type: 'json', root: 'makeModels' }
+                }
+            });
+            makeModels.load();
+
+            Ext.create("Ext.button.Button", {
+                renderTo: 'newOrder',
+                text: 'new Order',
+                handler: function() {
+                    Ext.create('Ext.window.Window', {
+                        title: 'Create Repair Order',
+                        layout: 'fit',
+                        width: 300,
+                        height: 400,
+                        items: [new RepairOrderForm({ makeModels: makeModels, pageBus: pageBus })]
+                    }).show();
+                }
+            });
+
             var ordersStore = Ext.create('Ext.data.Store', {
-                fields: ['code', 'advisor', 'customerName', 'year', 'make', 'model', 'vin', 'promiseDate', 'status'],
+                model: 'Order',
                 proxy: {
                     type: 'ajax',
                     url: '/api/RepairOrders/Page/1?format=json',
@@ -17,20 +61,9 @@
             });
 
             ordersStore.load();
-            var ordersGrid = Ext.create('Ext.grid.Panel', {
+            var ordersGrid = Ext.create('OrdersGrid', {
                 renderTo: 'ordersGrid',
-                store: ordersStore,
-                columns: [
-                    { header: 'Code', dataIndex: 'code' },
-                    { header: 'Advisor', dataIndex: 'advisor' },
-                    { header: 'Customer', dataIndex: 'customerName' },
-                    { header: 'Vehicle', renderer: function () {
-                            return '';
-                        }
-                    },
-                    { header: 'Promise Date', dataIndex: 'promiseDate'},
-                    { header: 'Status', dataIndex: 'status'}
-                ]
+                store: ordersStore
             });
         })
     </script>

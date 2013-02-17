@@ -8,10 +8,10 @@ using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace Counter.ServiceModel.Operations
 {
-    [Route("RepairOrders/{Page}")]
+    [Route("RepairOrders/Page/{Page}")]
     public class RepairOrders : IReturn<RepairOrdersResponse>
     {
-        public int? Page;
+        public int? Page { get; set; }
     }
 
     public class RepairOrdersResponse

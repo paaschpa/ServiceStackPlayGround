@@ -8,10 +8,21 @@ namespace SS_Demo
         {
             bundles.Add(new ScriptBundle("~/bundles/extjs").Include(
                 "~/Scripts/extjs/ext-all-debug.js",
-                "~/Scripts/extjs/ext-neptune-debug.js"));
-            bundles.Add(new StyleBundle("~/Scripts/neptune/css").Include("~/Scripts/resources/css/ext-neptune-debug.css"));
+                "~/Scripts/extjs/ext-neptune-debug.js",
+                "~/Scripts/app/Ajax/DataRetriever.js"));
 
-            bundles.Add(new StyleBundle("~/Content/site/css").Include("~/Content/Site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/servicecounter").Include(
+                "~/Scripts/app/Types/MakeModel.js",
+                "~/Scripts/app/Types/Order.js",
+                "~/Scripts/app/Types/ServiceAdvisor.js",
+                "~/Scripts/app/Views/RepairOrderForm.js",
+                "~/Scripts/app/Views/OrdersGrid.js"));
+
+            bundles.Add(new StyleBundle("~/Scripts/neptune/css").Include(
+                "~/Scripts/resources/css/ext-neptune.css",
+                "~/Scripts/resources/css/sink.css"));
+
+            //bundles.Add(new StyleBundle("~/Content/site/css").Include("~/Content/Site.css"));
             //bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
             //            "~/Scripts/jquery-1.*"));
 

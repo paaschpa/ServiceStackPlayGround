@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ServiceStack.Common, Version=3.9.35.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="ServiceStack.Interfaces">
       <HintPath>..\SS_Demo\bin\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
@@ -48,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MakeModelsService.cs" />
     <Compile Include="RepairOrdersService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceAdvisorsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Counter.ServiceModel\Counter.ServiceModel.csproj">

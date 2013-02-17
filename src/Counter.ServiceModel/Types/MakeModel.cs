@@ -6,12 +6,11 @@ using ServiceStack.DataAnnotations;
 
 namespace Counter.ServiceModel.Types
 {
-    public class ServiceAdvisor
+    public class MakeModel
     {
-        [PrimaryKey]
         [AutoIncrement]
         public int Id { get; set; }
-        public string Code { get; set; }
-        public string Name { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
     }
 }

@@ -16,4 +16,8 @@ api/MetaData
 
 - Remove OrmLite.SqlServer / Use Sqlite
 
+http://www.rvlogic.com/screenshot-sitemap.asp
 
+Install-Package ServiceStack.Razor (remove .dlls System.Web.WebPages.Deployment/Razor)
+http://stackoverflow.com/questions/9699083/servicestack-vs-asp-net-web-api
+Swagger one line doc, bosses impressed
